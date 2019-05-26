@@ -1,4 +1,4 @@
-package study;
+package BinarySearh;
 
 class BinarySearch {
     public int methoodBinarySearch(int key, int[] array){

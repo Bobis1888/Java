@@ -1,4 +1,4 @@
-package study;
+package BinarySearh;
 
 import java.util.Scanner;
 
