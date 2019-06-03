@@ -4,22 +4,23 @@ enum  Note {
     MIDDLE_C,C_SHARP,B_FLAT;
 }
 
-
-abstract class Instrument{
-    public abstract String toString();
+interface Playble{
+    void play();
+}
+abstract class Instrument implements Playble{
     void play(String name,Note note){System.out.println(name + ".play() " + note);};
     void adjust(String name){System.out.println(name + " adjusting");}
 }
-class InstrumentUser extends Instrument{
+class InstrumentUser extends Instrument implements Playble{
     private String name;
     private Note note;
-    public void setNote(Note n){
+    void setNote(Note n){
         this.note = n;
     }
     InstrumentUser(String s){
         this.name = s;
     }
-    void playInstrument(){
+    public void play(){
         super.play(name,note);
     }
     public String toString() {
