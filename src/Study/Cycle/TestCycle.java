@@ -1,4 +1,4 @@
-package Cycle;
+package Study.Cycle;
 
 public class TestCycle {
     public static void main(String[] args) {

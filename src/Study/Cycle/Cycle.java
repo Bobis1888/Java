@@ -1,4 +1,4 @@
-package Cycle;
+package Study.Cycle;
 
 class Cycle {
     void wheel(){}

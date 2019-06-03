@@ -1,4 +1,4 @@
-package ReferenceCounting;
+package Study.ReferenceCounting;
 
 class Shared{
     private int refcount = 0;

@@ -1,4 +1,4 @@
-package Frog;
+package Study.Frog;
 
 class Characcteristic{
     private String s;
@@ -62,10 +62,10 @@ public class Frog extends Amphibian {
     private Characcteristic p = new Characcteristic("croaks");
     private Description t = new Description("Eating beetle");
     public Frog(){
-        System.out.println("Create Frog");
+        System.out.println("Create Study.Frog");
     }
     protected void dispose(){
-        System.out.println("Finish Frog");
+        System.out.println("Finish Study.Frog");
         t.dispose();
         p.dispose();
         super.dispose();

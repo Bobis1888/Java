@@ -1,4 +1,4 @@
-package Study;
+package Study.Music;
 
 import java.util.Random;
 

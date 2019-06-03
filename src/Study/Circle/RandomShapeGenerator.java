@@ -1,4 +1,4 @@
-package MyClass;
+package Study.Circle;
 
 import java.util.Random;
 

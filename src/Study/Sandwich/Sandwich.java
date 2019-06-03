@@ -1,4 +1,4 @@
-package Sandwich;
+package Study.Sandwich;
 
 class Meal{
     Meal(){
@@ -41,7 +41,7 @@ public class Sandwich extends PortableLunch{
     private Lattuce l = new Lattuce();
     private Pickle p = new Pickle();
     public Sandwich(){
-        System.out.println("Sandwich");
+        System.out.println("Study/Sandwich");
     }
 
     public static void main(String[] args) {

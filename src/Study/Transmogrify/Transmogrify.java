@@ -1,4 +1,4 @@
-package Transmogrify;
+package Study.Transmogrify;
 
 class Actor{
     public void act(){}

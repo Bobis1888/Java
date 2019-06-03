@@ -1,4 +1,4 @@
-package Rodent;
+package Study.Rodent;
 
 public class TestRodent {
 

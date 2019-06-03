@@ -1,4 +1,4 @@
-package Rodent;
+package Study.Rodent;
 
 import java.util.Random;
 
@@ -39,31 +39,27 @@ class RandomRodentGenerator {
 }
 
 
-class Rodent {
+abstract class Rodent {
     private Shared shared;
     private static long counter = 0;
     private final long id = counter++;
     public Rodent(Shared shared){
-        System.out.println("Create Rodent " + id);
+        System.out.println("Create Study.Rodent " + id);
         this.shared = shared;
         this.shared.addRef();
     }
-    void eating(){
-        System.out.println("Rodent eating");
-    }
-    void fear(){
-        System.out.println("Rodent fear");
-    }
+    abstract public void eating();
+    abstract public void fear();
 }
 class Mouse extends Rodent{
     Mouse(Shared shared){
         super(shared);
         System.out.println("Create Mouse");
     }
-    void eating(){
+    public void eating(){
         System.out.println("Mouse eating cheese");
     }
-    void fear(){
+    public void fear(){
         System.out.println("Mouse fear a cat");
     }
     public String toString(){
@@ -75,10 +71,10 @@ class Hamster extends Rodent{
         super(shared);
         System.out.println("Create Hamster");
     }
-    void eating(){
+    public void eating(){
         System.out.println("Hamster eating nuts");
     }
-    void fear(){
+    public void fear(){
         System.out.println("The hamster is afraid of the eagle");
     }
     public String toString(){
@@ -90,10 +86,10 @@ class Squirrel extends Rodent{
         super(shared);
         System.out.println("Create Squirrel");
     }
-    void eating(){
+    public void eating(){
         System.out.println("Squirrel eating nuts");
     }
-    void fear(){
+    public void fear(){
         System.out.println("Squirrel is afraid of people");
     }
     public String toString(){

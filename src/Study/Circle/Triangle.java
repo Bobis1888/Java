@@ -1,4 +1,4 @@
-package MyClass;
+package Study.Circle;
 
 public class Triangle extends Shape {
     @Override

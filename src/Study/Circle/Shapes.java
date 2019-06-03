@@ -1,4 +1,4 @@
-package MyClass;
+package Study.Circle;
 
 class Shapes{
     private static RandomShapeGenerator gen = new RandomShapeGenerator();

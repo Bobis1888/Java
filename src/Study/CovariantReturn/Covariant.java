@@ -1,4 +1,4 @@
-package CovariantReturn;
+package Study.CovariantReturn;
 
 class Grain{
     public String toString(){
