@@ -35,16 +35,23 @@ class PortableLunch extends Lunch{
         System.out.println("Portable Lunch");
     }
 }
-public class Sandwich extends PortableLunch{
+public class Sandwich extends PortableLunch implements FastFood{
     private Bread b = new Bread();
     private Cheese c = new Cheese();
     private Lattuce l = new Lattuce();
     private Pickle p = new Pickle();
+    public void eat() {System.out.println("Eating Sandwich");}
+    public void order() {System.out.println("Order Sandwich");}
+    public void hotChili() {System.out.println("Add hotChili Peper");}
     public Sandwich(){
-        System.out.println("Study/Sandwich");
+        System.out.println("Sandwich");
     }
 
     public static void main(String[] args) {
-        new Sandwich();
+        Sandwich sandwich = new Sandwich();
+        sandwich.eat();
+        sandwich.hotChili();
+        sandwich.order();
     }
+
 }
