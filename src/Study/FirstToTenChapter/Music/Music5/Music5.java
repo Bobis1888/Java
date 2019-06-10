@@ -4,84 +4,50 @@ import Study.FirstToTenChapter.Music.MyMusic.Note;
 
 interface Playable{
     public void play(Note note);
+    void adjust();
+    String viewName();
 }
-abstract class Instrument{
-    public String toString(){return "Instrument";}
-    abstract void adjust();
-}
-class Wind extends Instrument implements Playable{
-    private String name = "Wind";
-    public void play(Note note){
-        System.out.println(name + ".play()" + note);
-    }
-    public String toString(){
-        return name;
-    }
+class Instrument{
+    String name;
+    Instrument(String name){this.name = name;}
+    Playable playable = new Playable() {
+        @Override
+        public void play(Note note) {
+            System.out.println("Play " + name + " " + Note.MIDDLE_C);
+        }
 
-    public void adjust() {
-        System.out.println(name + ".adjust()");
-    }
-}
-class Percussion extends Instrument implements Playable{
-    private String name = "Percussion";
-    public void play(Note note){
-        System.out.println(name + ".play()" + note);
-    }
-    public String toString(){
-        return name;
-    }
-    public void adjust(){
-        System.out.println(name + ".adjust()");
-    }
-}
-class Stringed extends Instrument implements Playable{
-    private String name = "Stringed";
-    public void play(Note note){
-        System.out.println(name + ".play()" + note);
-    }
-    public String toString(){
-        return name;
-    }
-    public void adjust(){
-        System.out.println(name + ".adjust()");
-    }
-}
-class Brass extends Wind{
-    private String name = "Brass";
-    public String toString(){
-        return name;
-    }
-    public void play(Note note){
-        System.out.println(name + ".play()");
-    }
-}
-class Woodwind extends Wind{
-    private String name = "Woodwind";
-    public String toString(){
-        return name;
-    }
-    public void play(Note note){
-        System.out.println(name + ".play()");
-    }
+        @Override
+        public void adjust() {
+            System.out.println("Adjust " + name);
+        }
+        @Override
+        public String viewName(){return name;}
+    };
 }
 public class Music5 {
-    private static void tune(Playable playable){
-        playable.play(Note.MIDDLE_C);
+    private static void tune(Instrument instrument){
+        instrument.playable.play(Note.MIDDLE_C);
     }
-    private static void tuneAll(Playable[] playable){
-        for (Playable p:playable) {
-            tune(p);
+    private static void tuneAll(Instrument[] instruments){
+        for (Instrument i: instruments) {
+            tune(i);
         }
     }
 
+
     public static void main(String[] args) {
-       Playable[] orchestra = {
-               new Wind(),
-               new Woodwind(),
-               new Brass(),
-               new Percussion(),
-               new Stringed()
+       Instrument[] orchestra = {
+               new Instrument("Wind"),
+               new Instrument("Woodowind"),
+               new Instrument("Brass"),
+               new Instrument("Balalayca")
+
        };
-       tuneAll(orchestra);
+
+        for (Instrument i:orchestra) {
+            System.out.println(i.playable.viewName());
+            i.playable.adjust();
+        }
+        tuneAll(orchestra);
     }
 }

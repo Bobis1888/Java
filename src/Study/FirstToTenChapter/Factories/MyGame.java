@@ -9,9 +9,6 @@ interface MyGameFactory{
     MyGameInterface getMygame();
 }
 class Coin implements MyGameInterface{
-    Coin(){
-        play();
-    }
     public void play(){
         Random random = new Random();
         switch (random.nextInt(2)){
@@ -25,16 +22,14 @@ class Coin implements MyGameInterface{
                     System.out.println("Error!");
         }
     }
-}
-class CoinFactory implements MyGameFactory{
-    public MyGameInterface getMygame(){
-        return new Coin();
-    }
+    public static MyGameFactory factory = new MyGameFactory() {
+        @Override
+        public MyGameInterface getMygame() {
+            return new Coin();
+        }
+    };
 }
 class Cube implements MyGameInterface{
-    Cube(){
-        play();
-    }
     public void play(){
         Random random = new Random();
         switch (random.nextInt(7)){
@@ -63,19 +58,22 @@ class Cube implements MyGameInterface{
                     System.out.println("Error");
         }
     }
-}
-class CubeFactory implements MyGameFactory{
-    public MyGameInterface getMygame(){
-        return new Cube();
-    }
+    public static MyGameFactory factory = new MyGameFactory() {
+        @Override
+        public MyGameInterface getMygame() {
+            return new Cube();
+        }
+    };
 }
 public class MyGame {
     private static void playGame(MyGameFactory factory){
-        MyGameInterface myGame = factory.getMygame();
+       MyGameInterface game = factory.getMygame();
+       game.play();
+
     }
 
     public static void main(String[] args) {
-        playGame(new CoinFactory());
-        playGame(new CubeFactory());
+       playGame(Cube.factory);
+       playGame(Coin.factory);
     }
 }
