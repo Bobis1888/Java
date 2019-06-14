@@ -67,6 +67,5 @@ class B{
         b.callMethodU();
         b.clearU(3);
         System.out.println(b.arrayU[3]);
-
     }
 }
