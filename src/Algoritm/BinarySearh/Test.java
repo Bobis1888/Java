@@ -1,4 +1,4 @@
-package BinarySearh;
+package Algoritm.BinarySearh;
 
 import java.util.Scanner;
 

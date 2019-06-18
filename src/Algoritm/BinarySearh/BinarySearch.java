@@ -1,4 +1,4 @@
-package BinarySearh;
+package Algoritm.BinarySearh;
 
 class BinarySearch {
     public int methoodBinarySearch(int key, int[] array){
