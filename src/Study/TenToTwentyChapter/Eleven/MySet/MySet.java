@@ -1,4 +1,4 @@
-package Study.TenToTwentyChapter.Eleven.Set;
+package Study.TenToTwentyChapter.Eleven.MySet;
 
 import java.util.*;
 
@@ -15,7 +15,7 @@ public class MySet {
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String s = scanner.next();
+        String s = scanner.nextLine();
         MySet.incrementCurrent(s);
         System.out.println(MySet.count);
     }

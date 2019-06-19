@@ -5,26 +5,30 @@ import java.util.*;
 public class Gerbil {
     private static int x = 0;
     private int gerbilNumber;
-    Gerbil(){
+       private Gerbil(){
         x++;
         gerbilNumber=x;
     }
     public void hop(){
-        System.out.println("This Gerbil № " + gerbilNumber);
+        System.out.println("This Gerbil Number " + gerbilNumber);
     }
-    public static List<Gerbil> getArray(int size){
-        List<Gerbil> list = new ArrayList<Gerbil>();
-        for (int i = 0; i <  size; i++) {
-            list.add(i,new Gerbil());
+    public static void main(String[] args) {
+        Map<String, Gerbil> map = new HashMap<String, Gerbil>();
+        map.put("ss",new Gerbil());
+        map.put("ss1",new Gerbil());
+        map.put("ss2",new Gerbil());
+        map.put("ss3",new Gerbil());
+        map.put("ss4",new Gerbil());
+        map.put("ss5",new Gerbil());
+        Iterator<String> iterator = map.keySet().iterator();
+        while (iterator.hasNext()){
+            String s = iterator.next();
+            System.out.println(s);
+            map.get(s);
         }
-    return list;
+
+
+
+        }
     }
 
-    public static void main(String[] args) {
-        List<Gerbil> list = Gerbil.getArray(12);
-        Iterator<Gerbil> iterator = list.iterator();
-        while (iterator.hasNext()){
-            iterator.next().hop();
-        }
-    }
-}
