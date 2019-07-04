@@ -73,7 +73,11 @@ public class Frog extends Amphibian {
 
     public static void main(String[] args) {
         Frog frog = new Frog();
-        System.out.println("Good By");
-        frog.dispose();
+        try {
+            System.out.println("Good By");
+            return;
+        }finally {
+            frog.dispose();
+        }
     }
 }

@@ -1,4 +1,4 @@
-package Study.FirstToTenChapter.Circle;
+package Study.FirstToTenChapter.Shapes;
 
 class Shapes{
     private static RandomShapeGenerator gen = new RandomShapeGenerator();

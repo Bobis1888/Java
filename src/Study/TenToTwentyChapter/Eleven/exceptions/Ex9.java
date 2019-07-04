@@ -13,6 +13,7 @@ class ExceptionC extends Exception {
 }
 
 public class Ex9 {
+    private static int[] ints = new int[1];
     public static void f(int x) throws ExceptionA, ExceptionB, ExceptionC {
         if(x < 0) throw new ExceptionA("x < 0");
         if(x == 0) throw new ExceptionB("x == 0");
@@ -20,6 +21,7 @@ public class Ex9 {
     }
     public static void main(String[] args) {
         try {
+            f(ints[0]);
             f(0);
             f(1);
             f(-1);
@@ -27,6 +29,8 @@ public class Ex9 {
         } catch(Exception e) {
             System.out.println("Caught Exception");
             e.printStackTrace(System.out);
+        }finally {
+            System.out.println("It is Finally");
         }
     }
 }

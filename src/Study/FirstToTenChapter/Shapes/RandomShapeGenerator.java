@@ -1,4 +1,4 @@
-package Study.FirstToTenChapter.Circle;
+package Study.FirstToTenChapter.Shapes;
 
 import java.util.Random;
 

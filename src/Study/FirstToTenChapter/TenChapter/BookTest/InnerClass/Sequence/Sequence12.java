@@ -1,0 +1,48 @@
+package Study.FirstToTenChapter.TenChapter.BookTest.InnerClass.Sequence;
+
+interface Selector{
+    boolean end();
+    Object current();
+    void next();
+}
+public class Sequence12 {
+    private Object[] items;
+    private int next = 0;
+    public Sequence12(int size){items = new Object[size];}
+    public void add(Object x) throws ArrayIndexOutOfBoundsException{
+        if (next == items.length)
+            throw new ArrayIndexOutOfBoundsException("Full Array[]");
+        if (next < items.length)
+            items[next++] = x;
+    }
+    private class SequenceSelector12 implements Selector{
+        private int i = 0;
+        public boolean end(){
+            return i==items.length;
+        }
+        public Object current(){
+            return items[i];
+        }
+        public void next(){
+            if (i<items.length)
+                i++;
+        }
+    }
+    public Selector selector(){
+        return new SequenceSelector12();
+    }
+
+    public static void main(String[] args) {
+        Sequence12 sequence = new Sequence12(10);
+        for (int i = 0; i < 10 ; i++) {
+                sequence.add(Integer.toString(i));
+        }
+        Selector selector = sequence.selector();
+        while (!selector.end()) {
+            System.out.println(selector.current() + " ");
+            selector.next();
+        }
+        System.out.println();
+        sequence.add(Integer.toString(10));
+    }
+}
