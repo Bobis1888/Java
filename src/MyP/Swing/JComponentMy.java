@@ -6,7 +6,7 @@ import java.awt.geom.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Main {
+public class JComponentMy {
     public static JFrame getFrame(){
         JFrame jFrame = new JFrame(){};
         jFrame.setVisible(true);
