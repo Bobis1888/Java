@@ -10,7 +10,11 @@ public class Ex20 {
     long l;
     String s;
     Ex20(String s1){
-        Scanner scanner = new Scanner(Arrays.toString(s1.split(" ")));
+        Scanner scanner = new Scanner(System.in);
+        String[] strings = s1.split(" ");
+        for (String str:strings) {
+        }
+
         i = scanner.nextInt();
         f = scanner.nextFloat();
         d = scanner.nextDouble();
