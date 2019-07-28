@@ -12,7 +12,8 @@ public class ForNameCreator extends PetCreator {
             "Study.TenToTwentyChapter.typeinfo.pets.Cymric",
             "Study.TenToTwentyChapter.typeinfo.pets.Rat",
             "Study.TenToTwentyChapter.typeinfo.pets.Mouse",
-            "Study.TenToTwentyChapter.typeinfo.pets.Hamster"
+            "Study.TenToTwentyChapter.typeinfo.pets.Hamster",
+            "Study.TenToTwentyChapter.typeinfo.pets.Gerbil"
     };
     @SuppressWarnings("unchecked")
     private static void loader(){
