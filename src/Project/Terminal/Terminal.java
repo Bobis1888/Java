@@ -1,4 +1,4 @@
-package MyP.Terminal;
+package Project.Terminal;
 
 import javax.swing.*;
 import java.awt.*;

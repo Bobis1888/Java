@@ -1,4 +1,4 @@
-package MyP.MyTest;
+package Project.MyTest;
 
 class Test{
     static {
@@ -8,7 +8,7 @@ class Test{
 
 public class ClassForName {
     public static void main(String[] args) throws Exception{
-        Class.forName("MyP.MyTest.Test");
+        Class.forName("Project.MyTest.Test");
     }
 }
 

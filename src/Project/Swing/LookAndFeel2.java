@@ -1,15 +1,9 @@
-package MyP.Swing;
+package Project.Swing;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Line2D;
-import java.awt.geom.Point2D;
-import java.awt.geom.Rectangle2D;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 public class LookAndFeel2 {
     public static JFrame getFrame(){

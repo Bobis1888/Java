@@ -1,4 +1,4 @@
-package MyP.Regex;
+package Project.Regex;
 
 import java.util.regex.*;
 

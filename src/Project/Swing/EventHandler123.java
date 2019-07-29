@@ -1,9 +1,9 @@
-package MyP.Swing;
+package Project.Swing;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
 
-import static MyP.Swing.JComponentMy.getFrame;
+import static Project.Swing.JComponentMy.getFrame;
 
 public class EventHandler123 {
 

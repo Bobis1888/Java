@@ -1,4 +1,4 @@
-package MyP.MyTest;
+package Project.MyTest;
 
 public class Counter {
     private static int counter = 0;

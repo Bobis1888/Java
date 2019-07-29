@@ -1,4 +1,4 @@
-package MyP.Swing;
+package Project.Swing;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;

@@ -1,12 +1,11 @@
-package MyP.Swing;
+package Project.Swing;
 
 import javax.swing.*;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 
-import static MyP.Swing.GetFrame.getFrame;
+import static Project.Swing.GetFrame.getFrame;
 
 public class WindodwListenersss {
     public static void main(String[] args) {

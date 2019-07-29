@@ -1,9 +1,8 @@
-package MyP.Swing;
+package Project.Swing;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class ActionSsss {
     static JFrame jFrame = GetFrame.getFrame();
