@@ -14,7 +14,7 @@ public class TSTest {
             System.out.println("Not founds");
         }
         System.out.println(mapsData.get(21).getBalance());
-        TransactionSystem.transaction(mapsData,20,21,50);
+        TransactionSystem.transaction(mapsData,50,31,50);
         System.out.println(mapsData.get(20).getBalance());
         System.out.println(mapsData.get(21).getBalance());
     }

@@ -14,19 +14,19 @@ class TransactionSystem {
                    int getBalance = mapsBankAccount.get(gets).getBalance();
                    mapsBankAccount.get(sends).setBalance(sendsBalance - sum);
                    mapsBankAccount.get(gets).setBalance(getBalance + sum);
-                   System.out.println("Transaction is Successful =>>>");
+                   System.out.println(" Transaction is Successful =>>>");
                    stateTransaction = true;
                } else {
-                   argumentsAccountBank = "Insufficient funds";
+                   argumentsAccountBank = " Insufficient funds";
                    System.out.println(argumentsAccountBank + "!!!");
                }
            }else {
-               argumentsAccountBank = "Bank account State: false";
+               argumentsAccountBank = " Bank account State: false";
                System.out.println(argumentsAccountBank);
            }
        } catch (NullPointerException e){
-           argumentsAccountBank = "Not found Bank Account";
-           System.out.println(argumentsAccountBank + "number");
+           argumentsAccountBank = " Not found Bank Account";
+           System.out.println(argumentsAccountBank + " number");
        }
        if (stateTransaction){
            ReportsOnTransactions.report(true,sum,sends,gets,argumentsAccountBank);
