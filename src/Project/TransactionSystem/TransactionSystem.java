@@ -1,30 +1,26 @@
 package Project.TransactionSystem;
 
-import  Project.TransactionSystem.Data.BankAccount;
-import java.util.List;
+import Project.TransactionSystem.Data.BankAccount;
+import java.util.Map;
 
 public class TransactionSystem {
-    private int searchSendsNumber(int sends,List<BankAccount> dataBankAccount){
-        int findNumber = 0;
-        for (int i = 0; i < dataBankAccount.size() ; i++) {
-            if (dataBankAccount.get(i).getState()){
-                if (dataBankAccount.get(i).getNumber()==sends){
-                    findNumber = i;
-                }
-            }
-        }
-        return findNumber;
-    }
-    public static void transaction(int sends,int gets,int sum){
-
-    }
-    public static void main(String[] args) {
-        List<BankAccount> dataBankAccounts = BankAccount.getBankAccount(1000);
-        for (BankAccount ba:dataBankAccounts) {
-            System.out.println(ba.getNumber());
-        }
-
-
-
+    static void transaction (Map<Integer, BankAccount> mapsBankAccount,int sends, int gets, int sum){
+       try {
+           if (mapsBankAccount.get(sends).getState()&&mapsBankAccount.get(gets).getState()){
+               if (mapsBankAccount.get(sends).getBalance()>sum) {
+                   int sendsBalance = mapsBankAccount.get(sends).getBalance();
+                   int getBalance = mapsBankAccount.get(gets).getBalance();
+                   mapsBankAccount.get(sends).setBalance(sendsBalance - sum);
+                   mapsBankAccount.get(gets).setBalance(getBalance + sum);
+                   System.out.println("Transaction is Successful =>>>");
+               } else {
+                   System.out.println("Insufficient funds!!!");
+               }
+           }else {
+               System.out.println("Bank Account №" + sends + " State: false");
+           }
+       } catch (NullPointerException e){
+           System.out.println("Not found Bank Account number: " + sends + " or " + gets);
+       }
     }
 }
