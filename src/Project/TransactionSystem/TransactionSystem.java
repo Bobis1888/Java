@@ -6,6 +6,7 @@ import java.util.Map;
 class TransactionSystem {
     static void transaction (Map<Integer, BankAccount> mapsBankAccount,int sends, int gets, int sum){
         boolean stateTransaction = false;
+        String argumentsAccountBank = "";
        try {
            if (mapsBankAccount.get(sends).getState()&&mapsBankAccount.get(gets).getState()){
                if (mapsBankAccount.get(sends).getBalance()>sum) {
@@ -16,18 +17,21 @@ class TransactionSystem {
                    System.out.println("Transaction is Successful =>>>");
                    stateTransaction = true;
                } else {
-                   System.out.println("Insufficient funds!!!");
+                   argumentsAccountBank = "Insufficient funds";
+                   System.out.println(argumentsAccountBank + "!!!");
                }
            }else {
-               System.out.println("Bank Account №" + sends + " State: false");
+               argumentsAccountBank = "Bank account State: false";
+               System.out.println(argumentsAccountBank);
            }
        } catch (NullPointerException e){
-           System.out.println("Not found Bank Account number: " + sends + " or " + gets);
+           argumentsAccountBank = "Not found Bank Account";
+           System.out.println(argumentsAccountBank + "number");
        }
        if (stateTransaction){
-           ReportsOnTransactions.report(true,sum,sends,gets);
+           ReportsOnTransactions.report(true,sum,sends,gets,argumentsAccountBank);
        } else {
-           ReportsOnTransactions.report(false,sum,sends,gets);
+           ReportsOnTransactions.report(false,sum,sends,gets,argumentsAccountBank);
        }
     }
 }
