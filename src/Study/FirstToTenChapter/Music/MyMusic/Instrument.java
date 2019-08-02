@@ -6,6 +6,7 @@ interface Playble{
 abstract class Instrument implements Playble{
     void play(String name,Note note){System.out.println(name + ".play() " + note);};
     void adjust(String name){System.out.println(name + " adjusting");}
+    void prepeareInstrument(String name){System.out.println(); }
 }
 class InstrumentUser extends Instrument implements Playble{
     private String name;
