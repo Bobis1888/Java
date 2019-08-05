@@ -2,9 +2,9 @@ package Study.FirstToTenChapter.TenChapter.BookTest.InnerClass.Sequence;
 
 import java.util.*;
 
-public class Sequence{
-   private ArrayList<Object> items = new ArrayList<Object>();
-   public void add(Object x){
+public class Sequence<T>{
+   private ArrayList<T> items = new ArrayList<T>();
+   public void add(T x){
        items.add(x);
    }
    public Iterator iterator(){
@@ -12,7 +12,7 @@ public class Sequence{
    }
 
     public static void main(String[] args) {
-        Sequence sequence = new Sequence();
+        Sequence<String> sequence = new Sequence<>();
         for (int i = 0; i < 10 ; i++) {
             sequence.add(Integer.toString(i));
         }

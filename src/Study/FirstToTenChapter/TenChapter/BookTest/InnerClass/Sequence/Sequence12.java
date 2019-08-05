@@ -1,48 +1,42 @@
 package Study.FirstToTenChapter.TenChapter.BookTest.InnerClass.Sequence;
 
+import java.util.ArrayList;
+import java.util.List;
+
 interface Selector{
     boolean end();
     Object current();
     void next();
 }
-public class Sequence12 {
-    private Object[] items;
+public class Sequence12 <T>{
+    private List<T> items = new ArrayList<>();
     private int next = 0;
-    public Sequence12(int size){items = new Object[size];}
-    public void add(Object x) throws ArrayIndexOutOfBoundsException{
-        if (next == items.length)
-            throw new ArrayIndexOutOfBoundsException("Full Array[]");
-        if (next < items.length)
-            items[next++] = x;
+    public Sequence12(List<T> items){this.items = items;}
+    public void add(T t){
+        items.add(t);
     }
     private class SequenceSelector12 implements Selector{
         private int i = 0;
         public boolean end(){
-            return i==items.length;
+            return i==items.size();
         }
-        public Object current(){
-            return items[i];
-        }
-        public void next(){
-            if (i<items.length)
-                i++;
-        }
+        public Object current(){return items.get(i);}
+        public void next(){if (i<items.size())i++;}
     }
     public Selector selector(){
         return new SequenceSelector12();
     }
 
     public static void main(String[] args) {
-        Sequence12 sequence = new Sequence12(10);
+       List<String> ls = new ArrayList<>();
+       Sequence12<String> stringSequence12 = new Sequence12<>(ls);
         for (int i = 0; i < 10 ; i++) {
-                sequence.add(Integer.toString(i));
+            stringSequence12.add(Integer.toString(i));
         }
-        Selector selector = sequence.selector();
-        while (!selector.end()) {
+        Selector selector = stringSequence12.selector();
+        while (!selector.end()){
             System.out.println(selector.current() + " ");
             selector.next();
         }
-        System.out.println();
-        sequence.add(Integer.toString(10));
     }
 }

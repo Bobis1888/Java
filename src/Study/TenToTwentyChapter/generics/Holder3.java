@@ -1,5 +1,7 @@
 package Study.TenToTwentyChapter.generics;
 
+import Study.TenToTwentyChapter.typeinfo.pets.Pet;
+
 public class Holder3<T> {
     private T a;
     public Holder3(T a){this.a = a;}
@@ -7,7 +9,7 @@ public class Holder3<T> {
     public T get(){return a;}
 
     public static void main(String[] args) {
-        Holder3<Automobile> h3 = new Holder3<>(new Automobile());
-        Automobile a = h3.get();
+        Holder3<Pet> h3 = new Holder3<>(new Pet("as"));
+        h3.get();
     }
 }
