@@ -45,19 +45,7 @@ class Animal extends LivingCreature{
         super.dispose();
     }
 }
-class Amphibian extends Animal{
-    private Characcteristic p = new Characcteristic("Can live in water");
-    private Description t = new Description("And in the water, and on the ground");
-    Amphibian(){
-        System.out.println("Create Amphibian");
-    }
-    protected void dispose(){
-        System.out.println("Finish Amphibian");
-        t.dispose();
-        p.dispose();
-        super.dispose();
-    }
-}
+
 public class Frog extends Amphibian {
     private Characcteristic p = new Characcteristic("croaks");
     private Description t = new Description("Eating beetle");
