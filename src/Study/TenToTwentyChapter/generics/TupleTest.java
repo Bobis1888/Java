@@ -1,13 +1,14 @@
 package Study.TenToTwentyChapter.generics;
 
 import Study.FirstToTenChapter.Frog.Amphibian;
-import net.mindview.util.*;
-import static net.mindview.util.Tuple.*;
+import Study.net.mindview.util.*;
+import Study.util.*;
+import static Study.net.mindview.util.Tuple.*;
 
 class Vehicle {
 }
 public class TupleTest {
-    static TwoTuple<String,Integer>f(){
+    static TwoTuple<String,Integer> f(){
         return tuple("hi",47);
     }
     static TwoTuple f2(){

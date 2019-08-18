@@ -2,7 +2,7 @@ package Study.TenToTwentyChapter.generics;
 
 import Study.TenToTwentyChapter.generics.coffee.Coffee;
 import Study.TenToTwentyChapter.generics.coffee.CoffeeGenerator;
-import net.mindview.util.Generator;
+import Study.net.mindview.util.Generator;
 
 import java.util.*;
 

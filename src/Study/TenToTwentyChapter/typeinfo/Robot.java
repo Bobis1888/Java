@@ -1,6 +1,6 @@
 package Study.TenToTwentyChapter.typeinfo;
 
-import net.mindview.util.Null;
+import Study.net.mindview.util.Null;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package Study.TenToTwentyChapter.generics;
 
-import net.mindview.util.Generator;
+import Study.net.mindview.util.Generator;
 
 public class Fibonacci implements Generator<Integer> {
     private int count = 0;

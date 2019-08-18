@@ -1,7 +1,7 @@
 package Study.TenToTwentyChapter.typeinfo;
 
 import Study.TenToTwentyChapter.typeinfo.coffe.*;
-import net.mindview.util.TypeCounter;
+import Study.net.mindview.util.TypeCounter;
 
 import java.util.*;
 

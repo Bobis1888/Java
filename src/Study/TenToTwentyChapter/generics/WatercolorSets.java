@@ -1,7 +1,7 @@
 package Study.TenToTwentyChapter.generics;
 
 import Study.TenToTwentyChapter.generics.watercolor.Watercolor;
-import net.mindview.util.Sets;
+import Study.net.mindview.util.Sets;
 import java.util.*;
 import static Study.TenToTwentyChapter.generics.watercolor.Watercolor.*;
 

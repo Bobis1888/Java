@@ -1,6 +1,6 @@
 package Study.TenToTwentyChapter.generics;
 
-import net.mindview.util.Generator;
+import Study.net.mindview.util.Generator;
 
 import java.util.ArrayList;
 import java.util.Random;

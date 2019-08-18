@@ -1,7 +1,7 @@
 package Study.TenToTwentyChapter.generics;
 
 import Study.FirstToTenChapter.Frog.Amphibian;
-import net.mindview.util.FourTuple;
+import Study.net.mindview.util.FourTuple;
 
 import java.util.*;
 

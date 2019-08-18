@@ -2,7 +2,7 @@ package Study.TenToTwentyChapter.typeinfo;
 
 import Study.TenToTwentyChapter.typeinfo.pets.Pet;
 import Study.TenToTwentyChapter.typeinfo.pets.PetCreatorNew;
-import net.mindview.util.TypeCounter;
+import Study.net.mindview.util.TypeCounter;
 
 import java.util.ArrayList;
 

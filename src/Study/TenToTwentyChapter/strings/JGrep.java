@@ -1,6 +1,8 @@
 package Study.TenToTwentyChapter.strings;
 
 
+import Study.net.mindview.util.TextFile;
+
 import java.util.regex.*;
 
 public class JGrep {
@@ -8,7 +10,7 @@ public class JGrep {
         Pattern p = Pattern.compile("\\b[Ssct]\\w+",Pattern.CASE_INSENSITIVE);
         int index = 0;
         Matcher m = p.matcher("");
-        for (String line : new net.mindview.util.TextFile(args[0])){
+        for (String line : new TextFile(args[0])){
             m.reset(line);
             while (m.find())
                 System.out.println(index++ + ": " + m.group() + ": " + m.start());

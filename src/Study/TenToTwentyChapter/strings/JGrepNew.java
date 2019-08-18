@@ -1,5 +1,7 @@
 package Study.TenToTwentyChapter.strings;
 
+import Study.net.mindview.util.TextFile;
+
 import java.util.*;
 import java.util.regex.*;
 
@@ -12,7 +14,7 @@ public class JGrepNew {
         System.out.println(args[0]);
         Pattern pattern = Pattern.compile("\".+?\"");
         Matcher m = pattern.matcher("");
-        for (String line : new net.mindview.util.TextFile(args[0])){
+        for (String line : new TextFile(args[0])){
             m.reset(line);
             while (m.find())
                 System.out.println("Found: "+ m.start() + " " + m.group());

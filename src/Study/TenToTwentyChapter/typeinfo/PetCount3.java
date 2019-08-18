@@ -3,7 +3,8 @@ package Study.TenToTwentyChapter.typeinfo;
 import Study.TenToTwentyChapter.typeinfo.pets.LiteralPetCreator;
 import Study.TenToTwentyChapter.typeinfo.pets.Pet;
 import Study.TenToTwentyChapter.typeinfo.pets.Pets;
-import net.mindview.util.*;
+import Study.net.mindview.util.MapData;
+import Study.util.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

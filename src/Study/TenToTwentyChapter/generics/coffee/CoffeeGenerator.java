@@ -1,6 +1,6 @@
 package Study.TenToTwentyChapter.generics.coffee;
 
-import net.mindview.util.Generator;
+import Study.net.mindview.util.Generator;
 
 import java.util.Iterator;
 import java.util.Random;

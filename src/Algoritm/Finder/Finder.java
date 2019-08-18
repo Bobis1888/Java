@@ -1,5 +1,7 @@
 package Algoritm.Finder;
 
+import Study.net.mindview.util.TextFile;
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,7 +18,7 @@ public class Finder {
         String scannerString2 = scanner.nextLine();
         Pattern pattern = Pattern.compile(scannerString2);
         Matcher m = pattern.matcher("");
-        for (String line : new net.mindview.util.TextFile(args[0])){
+        for (String line : new TextFile(args[0])){
             m.reset(line);
             while (m.find())
                 System.out.println("Found in position " + m.start() + " " + m.group());
