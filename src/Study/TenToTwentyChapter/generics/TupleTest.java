@@ -2,7 +2,6 @@ package Study.TenToTwentyChapter.generics;
 
 import Study.FirstToTenChapter.Frog.Amphibian;
 import Study.net.mindview.util.*;
-import Study.util.*;
 import static Study.net.mindview.util.Tuple.*;
 
 class Vehicle {
