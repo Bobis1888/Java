@@ -2,7 +2,7 @@ package Test.TestAlgorithm;
 
 import java.util.Scanner;
 
-/**@author bobis1888 */
+/**@author bobis1888*/
 
 public class Fibonacci {
         private static int recFib(int numberF) {
