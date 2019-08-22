@@ -3,33 +3,36 @@ package Test.TestAlgorithm;
 import java.util.Arrays;
 /**@author bobis1888 */
 public class FastSort {
-    public static void fastSort(Integer[] arr, int start , int end){
+    private static void fastSort(Integer[] arr, int start, int end){
         if (start>=end)
-            System.out.println(Arrays.toString(arr));
-        int s = start;
-        int e = end;
-        int medium = e + (s - e)/2;
+            return;
+        int start1 = start;
+        int end1 = end;
+        //select medium item
+        int medium = end1 + (start1 - end1)/2;
+        //remember value medium item
         int mediumValue = arr[medium];
-        while (s<e){
-            while (arr[s]<mediumValue){
-                s++;
+        while (start1<end1){
+            while (arr[start1]<mediumValue){
+                start1++;
             }
-            while (arr[e]>mediumValue){
-                e--;
+            while (arr[end1]>mediumValue){
+                end1--;
             }
-            if (s<=e){
-                int buff = arr[s];
-                arr[s] = arr[e];
-                arr[e] = buff;
-                s++;
-                e--;
+            if (start1<=end1){
+                int buff = arr[start1];
+                arr[start1] = arr[end1];
+                arr[end1] = buff;
+                start1++;
+                end1--;
             }
         }
-        if (start<e){
-            fastSort(arr,start,e);
+        System.out.println(Arrays.toString(arr));
+        if (start<end1){
+            fastSort(arr,start,end1);
         }
-        if (end>s){
-            fastSort(arr,s,end);
+        if (end>start1){
+            fastSort(arr,start1,end);
         }
         }
 
