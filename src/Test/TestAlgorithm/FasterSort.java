@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 /**@author bobis1888 */
 public class FasterSort {
+    private static String endString = "";
+    private static String startString = "";
     private static void fastSort(Integer [] arr,int startStart, int endEnd){
         //если длинна его 1 то нечего сортировать
         if (arr.length<2)
@@ -34,16 +36,21 @@ public class FasterSort {
         //если левый указатель меньше правого указателя кооорый перемещался в сторону начала вызываем fastSort
         if (startStart<end){
             fastSort(arr,startStart,end);
+            startString += "--";
+            System.out.println(startString + "fastSort( arr, " + startStart + ", " + end + ")");
+
         }
         //если правый указатель больще левого указателя который двигался в сторону конца вызываем fastSort
         if (endEnd>start){
             fastSort(arr,start,endEnd);
+            endString += "--";
+            System.out.println(endString + "fastSort( arr, " + start + ", " + endEnd + ")");
+
         }
     }
     public static void main(String[] args) {
         Integer [] arr = new Integer[]{4, 2, 8, 1, 3, 7, 6, 5};
-        System.out.println("old " + Arrays.toString(arr));
         fastSort(arr,0,7);
-        System.out.println("new " + Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
     }
 }
