@@ -1,4 +1,4 @@
-package Test.TestAlgorithm;
+package Algoritm.FastSort;
 
 import java.util.Arrays;
 

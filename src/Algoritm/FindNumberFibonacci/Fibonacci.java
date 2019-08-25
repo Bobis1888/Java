@@ -1,4 +1,4 @@
-package Test.TestAlgorithm;
+package Algoritm.FindNumberFibonacci;
 
 import java.util.Scanner;
 
