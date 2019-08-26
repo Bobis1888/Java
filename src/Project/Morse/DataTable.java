@@ -1,8 +1,8 @@
 package Project.Morse;
-/**@author bobis1888 */
+
 import java.util.HashMap;
 import java.util.Map;
-
+/**@author bobis1888 */
 class DataTable {
     DataTable(boolean active){
         if (active)
