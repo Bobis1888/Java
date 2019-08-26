@@ -14,6 +14,8 @@ class DataTable {
         return MorseOnMap.get(oneChar);
     }
     char getOff(String string){
+        if (string == null)
+            return '0';
         return MorseOffMap.get(string);
     }
     private  Map<Character,String> MorseOnMap;
@@ -29,7 +31,15 @@ class DataTable {
         MorseOnMap.put('З',"--··");          MorseOnMap.put('С',"···");           MorseOnMap.put('Ы',"-·--");
         MorseOnMap.put('И',"··");            MorseOnMap.put('Т',"-");             MorseOnMap.put('Ю',"··--");
         MorseOnMap.put('Й',"·---");          MorseOnMap.put('У',"··-");           MorseOnMap.put('Я',"·-·-");
-        MorseOnMap.put(' ',"**");            MorseOnMap.put('Э',"··-··");         MorseOnMap.put('Ъ',"-··-");
+        MorseOnMap.put(' ',"***");           MorseOnMap.put('0',"-----");         MorseOnMap.put('1',"·----");
+        MorseOnMap.put('2',"··---");         MorseOnMap.put('3',"···--");         MorseOnMap.put('4',"····-");
+        MorseOnMap.put('5',"·····");         MorseOnMap.put('6',"-····");         MorseOnMap.put('7',"--···");
+        MorseOnMap.put('8',"---··");         MorseOnMap.put('9',"----·");         MorseOnMap.put('.',"······");
+        MorseOnMap.put(',',"·-·-·-");        MorseOnMap.put(':',"---···");        MorseOnMap.put(';',"-·-·-·");
+        MorseOnMap.put('(',"-·--·-");        MorseOnMap.put(')',"-·--·-");        MorseOnMap.put('\'',"·----·");
+        MorseOnMap.put('"',"·-··-·");        MorseOnMap.put('—',"-····-");        MorseOnMap.put('?',"··--··");
+        MorseOnMap.put('!',"--··--");        MorseOnMap.put('/',"-··-·");         MorseOnMap.put('Э',"··-··");
+        MorseOnMap.put('Ъ',"-··-");          MorseOnMap.put('-',"-····-");
         return MorseOnMap;
     }
     private Map<String,Character>  MorseOffMap;
@@ -45,7 +55,14 @@ class DataTable {
         MorseOffMap.put("--··",'З');       MorseOffMap.put("···",'С');         MorseOffMap.put("-·--",'Ы');
         MorseOffMap.put("··",'И');         MorseOffMap.put("-",'Т');           MorseOffMap.put("··--",'Ю');
         MorseOffMap.put("·---",'Й');       MorseOffMap.put("··-",'У');         MorseOffMap.put("·-·-",'Я');
-        MorseOffMap.put("**",' ');         MorseOffMap.put("··-··",'Э');
+        MorseOffMap.put("***",' ');        MorseOffMap.put("··-··",'Э');       MorseOffMap.put("-----",'0');
+        MorseOffMap.put("·----",'1');      MorseOffMap.put("··---",'2');       MorseOffMap.put("···--",'3');
+        MorseOffMap.put("····-",'4');      MorseOffMap.put("·····",'5');       MorseOffMap.put("-····",'6');
+        MorseOffMap.put("---··",'8');      MorseOffMap.put("----·",'9');       MorseOffMap.put("······",'.');
+        MorseOffMap.put("·-·-·-",',');     MorseOffMap.put("---···",':');      MorseOffMap.put("-·-·-·",';');
+        MorseOffMap.put("-·--·-",'(');     MorseOffMap.put("·----·",'\'');     MorseOffMap.put("·-··-·",'"');
+        MorseOffMap.put("--··--",'!');     MorseOffMap.put("-··-·",'/');       MorseOffMap.put("--···",'7');
+        MorseOffMap.put("-····-",'—');     MorseOffMap.put("··--··",'?');      MorseOffMap.put(null,'*');
         return MorseOffMap;
     }
 }
