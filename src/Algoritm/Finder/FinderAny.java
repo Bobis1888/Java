@@ -1,6 +1,6 @@
 package Algoritm.Finder;
 
-import Study.net.mindview.util.TextFile;
+import Study.ThinkingInJava.util.TextFile;
 
 import java.io.File;
 import java.util.Scanner;
