@@ -11,7 +11,7 @@ public class Task2Impl implements IElementNumberAssigner {
         }
     }
     private static final IElementNumberAssigner INSTANCE = new Task2Impl();
-    //сохранить все Number и их порядок в Map;
+    //поиск порядкового номера Element с определенным serialNumber:
     private static Integer numberFinder(Map<Integer,Integer> map,int findNumber){
         for (int i = 0; i < map.size() ; i++) {
             if (map.get(i)==findNumber){
@@ -20,7 +20,7 @@ public class Task2Impl implements IElementNumberAssigner {
         }
         return 0;
     }
-    //поиск порядкового номера Element с определенным serialNumber:
+    //сохранить все Number и их порядок в Map;
     private static Map<Integer,Integer> getUnique(List<IElement> elements){
         Map<Integer, Integer> unique = new HashMap<>();
         for (int i = 0; i < elements.size(); i++) {
@@ -35,27 +35,23 @@ public class Task2Impl implements IElementNumberAssigner {
         int buffer = 0;
         Map<Integer,Integer> unique = getUnique(elements);
         for (int serialNumber = 0; serialNumber < elements.size() ; serialNumber++) {
+            buffer = serialNumber;
             //если порядковый номер не соответствует number;
-            while (elements.get(serialNumber).getNumber()!= serialNumber){
-                //есть ли гдето еще этот порядковый номер;
-                if (unique.containsValue(serialNumber)){
-                    //чтобы небыло повторов проверяем есть ли в unique такое рандомное значение;
-                    while (!unique.containsValue(buffer)){
-                        buffer = random.nextInt();
-                    }
-                    //если все ОК то присваееваем ему рандомое значение;
-                    elements.get(numberFinder(unique,serialNumber)).setNumber(buffer);
+            while (elements.get(serialNumber).getNumber()!= serialNumber) {
+
+
                 }
                 elements.get(serialNumber).setupNumber(serialNumber);
             }
         }
 
-    }
+
     public static void main(String[] args) {
         //создать лист с рандомными значениями;
-        ArrayList<IElement> arrayList = (ArrayList<IElement>) ElElement.returnTestList(10);
-        //присвоить им порядковые номера;
+        final ArrayList<IElement> arrayList = (ArrayList<IElement>) ElElement.returnTestList(10);
+        //print
         printNumbers(arrayList);
+        //присвоить им порядковые номера;
         INSTANCE.assignNumbers(arrayList);
         printNumbers(arrayList);
         //вывести количество вызовов setupNumber;

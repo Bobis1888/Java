@@ -42,7 +42,7 @@ public class ElElement implements IElement {
         Random random = new Random();
         ArrayList<IElement> returnsTestList = new ArrayList<>();
         for (int i = 0; i < sizeList; i++) {
-            returnsTestList.add(new ElElement(random.nextInt(100)));
+            returnsTestList.add(new ElElement(random.nextInt(10)));
         }
         return returnsTestList;
     }
