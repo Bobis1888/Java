@@ -15,6 +15,8 @@ public interface IElement {
      */
     int getNumber();
 
+    void setNumber(int number);
+
     /**
      * Присваивает номер для элемента.
 
@@ -22,8 +24,7 @@ public interface IElement {
      * (например, может делать запрос на update в базу или синхронно отправлять данные на внешний сервис),
      * по этой причине метод лучше вызывать как можно меньшее число раз.</p>
      *
-     * @param number
+     * @paramnumber
      */
     void setupNumber(int number);
-
 }
