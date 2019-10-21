@@ -39,16 +39,14 @@ class Core {
         while (!ships.isEmpty()){
             String scannerString = scanner.nextLine().toUpperCase();
             counter++;
-            for (ArrayList<String> coordinateShip : ships) {
-                if (coordinateShip.contains(scannerString)){
-                    coordinateShip.remove(scannerString);
+            Iterator<ArrayList<String>> iterator = ships.iterator();
+            while (iterator.hasNext()){
+                if (iterator.next().contains(scannerString)){
+                    iterator.next().remove(scannerString);
                     System.out.println("Hit!!!");
-                    if (coordinateShip.isEmpty()){
-                        System.out.println("You Killed Ship!!!");
-                        ships.remove(coordinateShip);
-                    }
+                    System.out.println(ships);
                 }else {
-                    System.out.println("You Missed!");
+                    System.out.println("LoL!!!");
                 }
             }
         }
